@@ -1,5 +1,5 @@
+import Imagenes from "./imagenes-main/Imagenes";
 import "./main.css";
-import Imagenes from "./imagenes-main/imagenes";
 
 const Main = () => {
   return (
