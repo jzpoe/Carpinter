@@ -1,4 +1,5 @@
-import React from 'react'
+import { useState } from 'react';
+import './imagenes.css'
 
 const Imagenes = () => {
     const [modalOn, setModalOn] = useState(false);
