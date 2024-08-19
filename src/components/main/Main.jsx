@@ -17,7 +17,7 @@ const Main = () => {
               técnicas tradicionales y modernas. Cada proyecto es un reflejo de
               nuestro compromiso con la excelencia, la creatividad y la
               satisfacción del cliente. Nos enorgullece convertir tus ideas en
-              realidad, con acabados impecables que duran toda la vida.
+              realidad, con acabados impecables que duran toda la vida
             </p>
           </div>
         </div>
