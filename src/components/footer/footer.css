@@ -1,0 +1,67 @@
+.contain-footer {
+    background-color: #2b1c0e; /* Color de fondo del footer */
+    color: white; /* Color del texto */
+    text-align: center; /* Centrar el texto */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 40px ;
+}
+
+.footer-content {
+    max-width: 1200px; /* Ancho máximo del contenido del footer */
+    margin: 0 auto; /* Centra el contenido */
+    padding: 0 15px; /* Espaciado interno */
+}
+
+.footer-content p {
+    margin: 0; /* Elimina el margen por defecto */
+    font-size: 14px; /* Tamaño de fuente para el texto */
+}
+
+.footer-links {
+    margin-top: 10px; /* Espaciado superior para los enlaces */
+}
+
+.footer-links a {
+    color: white; /* Color de los enlaces */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    margin: 0 10px; /* Espaciado horizontal entre enlaces */
+    font-size: 14px; /* Tamaño de fuente para los enlaces */
+}
+
+.footer-links a:hover {
+    text-decoration: underline; /* Subrayado al pasar el ratón por encima */
+}
+
+/* Media Queries para Responsividad */
+
+/* Celulares en modo vertical */
+@media (max-width: 480px) {
+    .footer-content {
+        padding: 10px; /* Reduce el padding en dispositivos pequeños */
+    }
+
+    .footer-links a {
+        display: block; /* Muestra los enlaces en bloques para pantallas pequeñas */
+        margin: 5px 0; /* Espaciado vertical entre enlaces */
+    }
+}
+
+/* Tabletas en modo vertical y pantallas medianas */
+@media (max-width: 768px) {
+    .footer-content {
+        padding: 15px; /* Ajusta el padding */
+    }
+
+    .footer-links a {
+        margin: 5px; /* Espaciado más pequeño */
+    }
+}
+
+/* Pantallas de portátiles y tablets en modo horizontal */
+@media (max-width: 1024px) {
+    .footer-content {
+        padding: 20px; /* Padding normal */
+    }
+}

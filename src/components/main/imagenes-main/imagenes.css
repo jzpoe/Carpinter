@@ -1,0 +1,118 @@
+.contain-image {
+  display: flex;
+  flex-wrap: wrap; /* Permite que las imágenes se ajusten en múltiples líneas si es necesario */
+  gap: 20px; /* Espacio entre las cards */
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.contain-parrafo{
+  margin-top: 10px;
+  left: 0;
+  color: #2b1c0e;
+}
+
+.imagen-main {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  overflow: hidden;
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+  cursor: pointer; /* Cambiar cursor para indicar clic */
+}
+
+.imagen-main img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 15px; /* Bordes redondeados para la imagen */
+}
+
+.imagen-main:hover {
+  transform: translateY(-10px); /* Efecto de elevación */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Sombra más intensa */
+  transition: transform 0.3s ease 0.1s, box-shadow 0.3s ease 0.1s; /* Retardo en el regreso */
+}
+
+.modal-main {
+  background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro */
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  z-index: 1000; /* Asegurarse de que esté por encima de otros elementos */
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  width: 90%;
+  max-width: 600px;
+  height: auto;
+  max-height: 80vh;
+  overflow-y: auto;
+  border-radius: 1rem;
+  position: relative;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.modal-body p {
+  color: black;
+  text-align: center;
+  margin: 0;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: .6rem;
+  cursor: pointer; /* Cambiar cursor para indicar clic */
+}
+
+/* Media Queries para Responsividad */
+
+/* Celulares en modo vertical */
+@media (max-width: 480px) {
+  .contain-image {
+    gap: 10px; /* Reducir espacio en pantallas pequeñas */
+  }
+
+  .modal-body {
+    width: 95%;
+    max-width: none; /* Permitir que el modal use el 95% del ancho en pantallas pequeñas */
+  }
+}
+
+/* Tabletas en modo vertical */
+@media (max-width: 768px) {
+  .modal-body {
+    width: 90%;
+    max-width: none;
+  }
+}
+
+/* Pantallas de portátiles y tablets en modo horizontal */
+@media (max-width: 1024px) {
+  .modal-body {
+    width: 80%;
+  }
+}
+
+/* Pantallas grandes */
+@media (min-width: 1200px) {
+  .modal-body {
+    width: 50%;
+    max-width: 600px;
+  }
+}

@@ -1,0 +1,180 @@
+.contain {
+  max-width: 1600px;
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  padding: 0 15px; /* Agrega un pequeño padding para espacios laterales internos */
+}
+
+.contain-main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  height: auto; /* Cambiar altura a auto para mejorar responsividad */
+  margin-top: 50px;
+  gap: 30px; /* Agrega un espaciado de 30px entre los elementos */
+}
+
+.contain-1 {
+  display: flex;
+  flex-direction: column; /* Alinea el título y el párrafo en columna */
+  gap: 40px;
+  align-items: center;
+  background-color: #5D3A1A;
+  padding: 20px; /* Agrega espacio interno */
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+}
+
+.contain-1 h1 {
+  color: white;
+  font-size: 36px;
+}
+
+.contain-nosotros {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white; /* Color del texto */
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 20px;
+  width: 100%; /* Ajustar al 100% del contenedor */
+  max-width: 500px; /* Máximo ancho */
+  height: auto; /* Ajustar altura automáticamente */
+}
+
+.contain-nosotros p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.contain-1:hover {
+  transform: translateY(-10px); /* Efecto de elevación */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Sombra más intensa */
+}
+
+.contain-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para la segunda card */
+  height: auto;
+}
+
+.img-contain2 {
+  display: flex;
+  gap: 20px; /* Espacio entre las cards */
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.img-contain2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px; /* Bordes redondeados para la imagen */
+}
+
+.image-contain2 {
+  position: relative;
+  width: 100%;
+  max-width: 300px; /* Ancho máximo */
+  height: auto; /* Altura automática */
+  overflow: hidden;
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+}
+
+/* Media Queries para Responsividad */
+
+/* Celulares en modo vertical */
+@media (max-width: 480px) {
+  .contain-main {
+display: flex;
+flex-direction: column;
+}
+
+  .contain-1 {
+      padding: 10px; /* Reducir padding en pantallas pequeñas */
+  }
+
+  .contain-nosotros {
+      width: 100%;
+      max-width: 100%; /* Ancho completo en pantallas pequeñas */
+      font-size: 16px; /* Reducir tamaño de fuente */
+  }
+
+  .img-contain2 img {
+      width: 100%;
+      height: auto; /* Mantener la proporción en pantallas pequeñas */
+  }
+}
+
+/* Tabletas en modo vertical */
+@media (max-width: 768px) {
+  .contain-main {
+      grid-template-columns: 1fr; /* Una columna en lugar de dos */
+  }
+
+  .contain-1 {
+      padding: 15px; /* Ajustar padding */
+  }
+
+  .contain-nosotros {
+      width: 100%;
+      max-width: 100%; /* Ancho completo en pantallas medianas */
+      font-size: 18px; /* Tamaño de fuente adecuado */
+  }
+
+  .img-contain2 img {
+      width: 100%;
+      height: auto; /* Mantener la proporción en pantallas medianas */
+  }
+}
+
+/* Pantallas de portátiles y tablets en modo horizontal */
+@media (max-width: 1024px) {
+  .contain-main {
+      grid-template-columns: 1fr 1fr; /* Dos columnas iguales en pantallas más grandes */
+  }
+
+  .contain-1 {
+      padding: 20px; /* Padding ajustado */
+  }
+
+  .contain-nosotros {
+      width: 100%;
+      max-width: 100%; /* Ancho completo en pantallas grandes */
+  }
+
+  .img-contain2 img {
+      width: 100%;
+      height: auto; /* Mantener la proporción en pantallas grandes */
+  }
+}
+
+/* Pantallas grandes */
+@media (min-width: 1200px) {
+  .contain-main {
+      grid-template-columns: 2fr 1fr; /* Dos columnas con proporciones específicas en pantallas grandes */
+  }
+
+  .contain-1 {
+      padding: 20px; /* Padding en pantallas grandes */
+  }
+
+  .contain-nosotros {
+      width: 100%;
+      max-width: 500px; /* Máximo ancho en pantallas grandes */
+  }
+
+  .img-contain2 img {
+      width: 100%;
+      height: auto; /* Mantener la proporción en pantallas grandes */
+  }
+}
